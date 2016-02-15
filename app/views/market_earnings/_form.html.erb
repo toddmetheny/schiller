@@ -1,0 +1,53 @@
+<%= form_for(@market_earning) do |f| %>
+  <% if @market_earning.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@market_earning.errors.count, "error") %> prohibited this market_earning from being saved:</h2>
+
+      <ul>
+      <% @market_earning.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :date %><br>
+    <%= f.text_field :date %>
+  </div>
+  <div class="field">
+    <%= f.label :consumer_price_index %><br>
+    <%= f.text_field :consumer_price_index %>
+  </div>
+  <div class="field">
+    <%= f.label :dividend %><br>
+    <%= f.text_field :dividend %>
+  </div>
+  <div class="field">
+    <%= f.label :date_fraction %><br>
+    <%= f.text_field :date_fraction %>
+  </div>
+  <div class="field">
+    <%= f.label :long_interest_rate %><br>
+    <%= f.text_field :long_interest_rate %>
+  </div>
+  <div class="field">
+    <%= f.label :real_price %><br>
+    <%= f.text_field :real_price %>
+  </div>
+  <div class="field">
+    <%= f.label :real_dividend %><br>
+    <%= f.text_field :real_dividend %>
+  </div>
+  <div class="field">
+    <%= f.label :real_earnings %><br>
+    <%= f.text_field :real_earnings %>
+  </div>
+  <div class="field">
+    <%= f.label :cape %><br>
+    <%= f.text_field :cape %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

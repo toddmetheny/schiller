@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @market_earning.date %>
+</p>
+
+<p>
+  <strong>Consumer price index:</strong>
+  <%= @market_earning.consumer_price_index %>
+</p>
+
+<p>
+  <strong>Dividend:</strong>
+  <%= @market_earning.dividend %>
+</p>
+
+<p>
+  <strong>Date fraction:</strong>
+  <%= @market_earning.date_fraction %>
+</p>
+
+<p>
+  <strong>Long interest rate:</strong>
+  <%= @market_earning.long_interest_rate %>
+</p>
+
+<p>
+  <strong>Real price:</strong>
+  <%= @market_earning.real_price %>
+</p>
+
+<p>
+  <strong>Real dividend:</strong>
+  <%= @market_earning.real_dividend %>
+</p>
+
+<p>
+  <strong>Real earnings:</strong>
+  <%= @market_earning.real_earnings %>
+</p>
+
+<p>
+  <strong>Cape:</strong>
+  <%= @market_earning.cape %>
+</p>
+
+<%= link_to 'Edit', edit_market_earning_path(@market_earning) %> |
+<%= link_to 'Back', market_earnings_path %>

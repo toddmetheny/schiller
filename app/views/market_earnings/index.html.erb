@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Market Earnings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Consumer price index</th>
+      <th>Dividend</th>
+      <th>Date fraction</th>
+      <th>Long interest rate</th>
+      <th>Real price</th>
+      <th>Real dividend</th>
+      <th>Real earnings</th>
+      <th>Cape</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @market_earnings.each do |market_earning| %>
+      <tr>
+        <td><%= market_earning.date %></td>
+        <td><%= market_earning.consumer_price_index %></td>
+        <td><%= market_earning.dividend %></td>
+        <td><%= market_earning.date_fraction %></td>
+        <td><%= market_earning.long_interest_rate %></td>
+        <td><%= market_earning.real_price %></td>
+        <td><%= market_earning.real_dividend %></td>
+        <td><%= market_earning.real_earnings %></td>
+        <td><%= market_earning.cape %></td>
+        <td><%= link_to 'Show', market_earning %></td>
+        <td><%= link_to 'Edit', edit_market_earning_path(market_earning) %></td>
+        <td><%= link_to 'Destroy', market_earning, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Market earning', new_market_earning_path %>
